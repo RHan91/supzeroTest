@@ -1,0 +1,636 @@
+html
+  head
+    meta(charset='utf-8')
+    |     
+    title FIREBASE_TEST
+    |     
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    |     
+    link(href='https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text', rel='stylesheet')
+    |  
+    |     
+    link(href='https://fonts.googleapis.com/css?family=Exo+2:800i', rel='stylesheet')
+    |  
+    |     
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Mono', rel='stylesheet')
+  |   
+  body
+    .site.set
+      // SITE DIV STARTS
+      // NAVIGATION
+      #navID.navigation.set
+        .navTopBar.set
+          .navLogo.set Supzero
+        |             
+        .navMenuBar.hide.set
+          .navMB.select.set
+            button.navbtn.select HOME
+          |                 
+          .navMB.set
+            button.navbtn CONTACT
+          |                 
+          .navMB.set
+            button.navbtn USER
+          |                 
+          .navMBSpace
+          |                 
+          .navMB.set.logOutDiv
+            button#btnLogOut.logOutBtn Log Out
+      // NAVIGATION END//
+      // MAIN CONTENT START
+      .content.set
+        .nCont.set
+          .nCLeft.set
+            .nCLTop.set
+              .nCPL.set
+                img#nCPLImg(src='imgs/accountIcon.png')
+              |                         
+              .nCPR.set
+                .nCPUserName.set USER NAME
+                |                             
+                .nCPUserStatus.set STATUS OF USER
+            |                     
+            .nCLMid.set
+              #nCNavBtn1.nCNav.nl1.set
+                .nCNavImg.set
+                  img#navImg(src='imgs/accountIcon.png')
+                |                             
+                .nCNavSub.set Account
+              |                         
+              #nCNavBtn2.nCNav.nl3.set
+                .nCNavImg.set
+                  img#navImg(src='imgs/ninjaIcon.png')
+                |                             
+                .nCNavSub.set Supzero
+              |                         
+              #nCNavBtn3.nCNav.nl2.set
+                .nCNavImg.set
+                  img#navImg(src='imgs/marketIcon.png')
+                |                             
+                .nCNavSub.set Market
+            |                     
+            .nCLBot.set
+          |                 
+          .nCRight.set
+            .nCRTop.set
+              .nCRTL.set
+              |                         
+              .nCRTR.set
+                button.nCRBtn.initBtn.set Whats new?
+            |                     
+            .nCRBot.set
+              // NAVIGATION For Bottom Right
+              .nCRBNav.set.hide
+                .nCNavSearch.set
+                  .nCNSearch.set
+                    input(type='text', placeholder='Search...')
+                |                                 
+                .nCNavButtons.set
+                  .nCNB.set
+                    button.initBtn.nCNB1 Button
+                  |                                     
+                  .nCNB.set
+                    button.initBtn.nCNB1 Button
+                  |                                     
+                  .nCNB.set
+                    button.initBtn.nCNB1 Button
+                  |                                     
+                  .nCNB.set
+                    button.initBtn.nCNB1 Button
+              // NAVIGATION ENDS
+              // Content Display Container
+              .nCRBCont.set
+                // ACCOUNT INFORMATION TAB
+                #accountTabID.accountTab.set.hide
+                  // mPLeft Starts
+                  .mPLeft.set
+                    .accountEdit.set
+                      h3 User Information
+                      |                                             
+                      |                                                 
+                      p Name:
+                      |                                                 
+                      input#upName.iPB2(type='text', placeholder='Ron Mexico')
+                      |                                             
+                      |                                                 
+                      p Address:
+                      |                                                 
+                      input#upAddress.iPB2(type='text', placeholder='123 Castle Ave')
+                      |                                             
+                      |                                                 
+                      p Zip Code:
+                      |                                                 
+                      input#upZip.iPB2(type='text', placeholder='12345')
+                      |                                                 
+                      p Default Size:
+                      |                                                 
+                      select#upSize.aESize
+                        option(value='small') Small
+                        |                                                     
+                        option(value='medium') Medium
+                        |                                                     
+                        option(value='large') Large
+                        |                                                     
+                        option(value='xlarge') Xlarge
+                      |                                                 
+                      br
+                      br
+                      |                                                 
+                      |                                                 
+                      button#btnUserInfoSubmit.initBtn.iB2 Submit
+                  // mPLeft ENds
+                  .mPRight.set
+                    .accountEdit2.set
+                      h3 Billing Information
+                      |                                                                                                 
+                      |                                                     
+                      p.p2 Name:
+                      |                                                     
+                      input#upName.iPB1(type='text', placeholder='Ron Mexico')
+                      |                                                 
+                      |                                                     
+                      p.p2 Address:
+                      |                                                     
+                      input#upAddress.iPB1(type='text', placeholder='123 Castle Ave')
+                      |                                                 
+                      |                                                     
+                      p.p2 Zip Code:
+                      |                                                     
+                      input#upZip.iPB1(type='text', placeholder='12345')
+                      |         
+                      |                                                     
+                      p.p2 Credit Card # :
+                      |                                                     
+                      input#upZip.iPB1(type='text', placeholder='1234-1234-1234-1234')
+                      |         
+                      |                                                     
+                      p.p2 CC Experation Date :
+                      |                                                     
+                      input#upZip.iPB1(type='text', placeholder='05/17')
+                      |                                                     
+                      p.p2 CC Security Code:
+                      |                                                     
+                      input#upZip.iPB1(type='text', placeholder='123')
+                      |                                                     
+                      br
+                      |                                                     
+                      |                                                     
+                      button#btnUserInfoSubmit.initBtn.iB1 Submit
+                // END/ ACOUNT INFORMATION TAB
+                // SUPZERO TAB
+                #supZeroTabID.accountTab.set.hide
+                  // ADD ITEM
+                  .sup.sAddItem.set
+                    .sAIsub.sAIsubName.set
+                      #preBtnKeyword.itemNamePreBtn.set  Keyword/ Item Name
+                      |                                                     
+                      |                                                     
+                      #sClass1.itemNameSearch.hide.set
+                        input#iNScID.iNSc.set(type='text', placeholder='Enter Keyword/ Item Name')
+                        |                                                         
+                        #iNameSubBtn.iNameSub.set Submit
+                    |                                                 
+                    .sAIsub.set
+                      #preBtnType.itemNamePreBtn.inpb.set   Type 
+                      |                                                     
+                      |                                                     
+                      #sClass2.sAIsubContainer.hide.set
+                        #supTypeBtn1.sAIType.set All
+                        |                                                         
+                        #supTypeBtn2.sAIType.set Jackets
+                        |                                                         
+                        #supTypeBtn3.sAIType.set Shirts
+                        |                                                         
+                        #supTypeBtn4.sAIType.set Tops
+                        |                                                         
+                        #supTypeBtn5.sAIType.set Sweatshirts
+                        |                                                         
+                        #supTypeBtn6.sAIType.set Pants
+                        |                                                         
+                        #supTypeBtn7.sAIType.set Shorts
+                        |                                                         
+                        #supTypeBtn8.sAIType.set T-Shirts
+                        |                                                         
+                        #supTypeBtn9.sAIType.set Hats
+                        |                                                         
+                        #supTypeBtn10.sAIType.set Bags
+                        |                                                         
+                        #supTypeBtn11.sAIType.set Accs
+                        |                                                         
+                        #supTypeBtn12.sAIType.set Skate
+                      |                                                      
+                      |                                                     
+                      #preBtnColor.itemNamePreBtn.inpb.set  Color 
+                      |                                                     
+                      |                                                     
+                      #subColorBox.subColor.hide.set
+                        input#sAIColor.pS12.set(placeholder="Type 'any' for first available")
+                        |                                                         
+                        #itemColorSubmitBtn.subBtnC.set Submit
+                    |                                                 
+                    .sAIsub.set
+                      #preBtnSize.itemNamePreBtn.set   Size 
+                      |                                                     
+                      #sClass3.sAIsubContainer.hide.set
+                        #supSizeBtn1.sAISize.set S
+                        |                                                         
+                        #supSizeBtn2.sAISize.set M
+                        |                                                         
+                        #supSizeBtn3.sAISize.set L
+                        |                                                         
+                        #supSizeBtn4.sAISize.set XL
+                        |                                                         
+                        #supSizeBtn5.sAISize.set ANY
+                      |                                                     
+                      #preBtnDelay.itemNamePreBtn.set Delay
+                      |                                                     
+                      #delayCont.subColor.sC2.hide
+                        input#preBtnDelay1.pS12.set(type='text', placeholder='Delay time')
+                        |                                                         
+                        #delaySubBtn.subBtnC.set Submit
+                    |                                                 
+                    .sAIsub.sAi1.set
+                      .saProfile.set
+                        .saProfileBox.set
+                          select#proSelectMenuID.proSelectMenu(name='Profiles')
+                        |                                                         
+                        #createProfileBtn.saAddProBtn1.set New
+                        |                                                         
+                        #selectProfileBtn.saAddProBtn2.set Select
+                    |                                                 
+                    .sAIsub.sAi5.set
+                      button#supItemSubmitBtn.initBtn.sADB1 Add Item
+                  // END/ ADD ITEM
+                  // ITEM LIST
+                  .sup.sItemList.set
+                    .sItemListTop.set
+                      .sItemListCats.set Keyword
+                      |                                                     
+                      .sItemListCats.set Type
+                      |                                                     
+                      .sItemListCats.set Size
+                      |                                                     
+                      .sItemListCats.set Color
+                      |                                                     
+                      .sItemListCats.set Delay
+                      |                                                     
+                      .sItemListCats.set Profile
+                    |                                                 
+                    #targetList.sItemListBot.set
+                    |                                                 
+                    .sItemListBot2.set
+                      button#supStartBtn.initBtn.sADB3 Start
+                      |                                                     
+                      button#supItemSubmitBtn.initBtn.sADB3 Clear list
+                  // END/ ITEM LIST
+                  // BILLING INFO
+                  .sup.sBilling.set
+                    #billingInfoBox.accountEdit2.hide.set
+                      h3.h3e2 New Profile
+                      |                                                     
+                      p.p2 Profile Name:
+                      |                                                     
+                      input#profileName1.iPB1(type='text', placeholder='Enter name for profile')
+                      |         
+                      |                                                     
+                      p.p2 Name:
+                      |                                                     
+                      input#upName1.iPB1(type='text', placeholder='Ron Mexico')
+                      |                                                         
+                      |                                                     
+                      p.p2 Address:
+                      |                                                     
+                      input#upAddress1.iPB1(type='text', placeholder='123 Castle Ave')
+                      |                                                         
+                      |                                                     
+                      p.p2 Zip Code:
+                      |                                                     
+                      input#upZip1.iPB1(type='text', placeholder='12345')
+                      |                 
+                      |                                                     
+                      p.p2 Credit Card # :
+                      |                                                     
+                      input#upCreditCard.iPB1(type='text', placeholder='1234-1234-1234-1234')
+                      |                                                     
+                      |                                                     
+                      .aE22.set
+                        .ae22Left.set
+                          p.p2 CC Experation Date :
+                          |                                                             
+                          input#upCExp.iPB3(type='text', placeholder='05/17')
+                        |                                                         
+                        .ae22Right.set
+                          p.p2 CC Security Code:
+                          |                                                             
+                          input#upCSec.iPB3(type='text', placeholder='123')
+                      |                                                     
+                      |                                                     
+                      br
+                      br
+                      |                                                     
+                      p.p2 Email :
+                      |                                                     
+                      input#upEmail.iPB4(type='text', placeholder='example@email.com')
+                      |     
+                      |                                                         
+                      |                                                             
+                      |                                                        
+                      |                                                     
+                      p.p2 Phone # :
+                      |                                                     
+                      input#upNumber.iPB4(type='text', placeholder='515-555-5515')
+                      |     
+                      |                                                      
+                      |                                                     
+                      |                                                             
+                      |                                                     
+                      button#proSubmit.initBtn.iB1 Submit
+                  // END/ BILLING INFO
+                // END/ SUPZERO TAB
+              // END/ Content Display Container
+        // LOG IN
+        #initChoiceID.initChoice.hide.set
+          .divider
+            | SUPZERO
+          |                     
+          p Email
+          |                     
+          input#txtEmailLogIn(type='email', placeholder='example@mail.com')
+          |                     
+          br
+          |                     
+          p Password
+          |                     
+          input#txtPasswordLogIn(type='password', placeholder='Password')
+          |                     
+          br
+          |                     
+          button#btnLogIn.initBtn2 Log In
+          |                     
+          button#btnForgotPass.initBtn2 Forgot Password
+          |                     
+          br
+          br
+        // LOG IN END
+        // SIGN UP
+        #signUpLogoDiv.signUpForm.set
+          img#supLogo.supLogoClass.set(src='imgs/supzero2.png')
+        |     
+        |                 
+        #suf.signUpContainer.set
+          .signUpForm2.set
+            .divider
+              | SUPZERO
+            |                         
+            p Sign up to get access and
+            |                         
+            p never miss a drop
+            |                         
+            button#facebookLogIn.initBtn.test1 Log in with Facebook
+            |                     
+            br
+            h6 OR
+            |                             
+            input#signUpEmail.txtInput(type='email', placeholder='Email')
+            |                         
+            |                         
+            p
+            |                             
+            input#signUpPassword.txtInput(type='password', placeholder='Password')
+            |             
+            |                         
+            p
+            |                             
+            input#signUpName.txtInput(type='text', placeholder='Full Name')
+            |             
+            |                         
+            p
+            |                             
+            input#signUpAddress.txtInput(type='text', placeholder='Address')
+            |             
+            |                         
+            p
+            |                             
+            input#signUpZip(type='text', placeholder='Zip Code')
+            //
+              <p></p>
+              <select id='signUpSize'>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="xlarge">Xlarge</option>
+              </select>
+              !
+            br
+            |                             
+            button#btnSignUpSubmit.initBtn.test1 Sign up
+            |                             
+            br
+            br
+            |                         
+            p
+              | By signing up, you agree to our Terms &amp; Privacy Policy.
+          |                     
+          .signUpForm3.set
+            | Already Have an account?
+            br
+            br
+            |                         
+            button#btnSignUp.initBtn.test1 Log In
+        // SIGN UP END
+        // USER PANEL START
+        #userPanel.userPanel.set.hide
+          #upNav.userPanel-nav
+            | CURRENT USER:
+          |                     
+          .userPanel-content
+            #leftpan.userPanel-content-left
+              .uPB
+                button#userPanel-left-btn1.userPanelBtns(type='button') USER INFO
+              |                             
+              .uPB
+                button#userPanel-left-btn2.userPanelBtns(type='button') USER LIST
+              |                             
+              .uPB
+                button#userPanel-left-btn3.userPanelBtns(type='button') CREATE DROP LIST
+              |                             
+              .uPB
+                button#userPanel-left-btn4.userPanelBtns(type='button') LAUNCH PANEL
+              |                             
+              .uPB
+                button#userPanel-left-btn5.userPanelBtns(type='button') ADMIN
+            |                         
+            .userPanel-content-right
+              #uPS1.uPM.uP1.hide
+                .uP1Left.set
+                  p Email:
+                  |                                     
+                  input#upEmail.ip1(type='email', placeholder='Username@email.com')
+                  |                             
+                  |                                     
+                  p Name:
+                  |                                     
+                  input#upName(type='text', placeholder='Ron Mexico')
+                |                                 
+                .uP1Right.set
+                  p Address:
+                  |                                         
+                  input#upAddress(type='text', placeholder='123 Castle Ave')
+                  |                         
+                  |                                     
+                  p Zip Code:
+                  |                                         
+                  input#upZip(type='text', placeholder='12345')
+                |                                 
+                p Size:
+                |                 
+                |                                 
+                select#upSize
+                  option(value='small') Small
+                  |                                     
+                  option(value='medium') Medium
+                  |                                     
+                  option(value='large') Large
+                  |                                     
+                  option(value='xlarge') Xlarge
+                |                                 
+                |                     
+                |                                 
+                p
+                  label(for='confirmChanges') Confirm changes?
+                  |                                         
+                  input#confirmChanges(type='checkbox', name='confirm', value='confirm')
+                |                                     
+                button#btnUserInfoSubmit.initBtn Submit
+              |                 
+              #uPS2.uPM.uP2.hide
+                .uP2UserCount
+                  | Current user count:
+                  #userCount
+                |                     
+                .uP2UserList
+                  | List of users:
+                  ol#userList
+              |                 
+              #uPS3.uPM.uP3.hide
+                .schedNav.set
+                  .schedNavBtns
+                    div
+                      button#newSchedProfile.sNB New Profile
+                    |                             
+                    div
+                      button#loadSchedProfile.sNB Load Profile
+                  |                         
+                  #profileSelected1.schedNavProfileCreate
+                    | PROFILE NAME:
+                    input#schedProfileName.schedProfileNameInput.hide(placeholder='ex: Supreme Drop 2/18/18', type='text')
+                    |                             
+                    select#schedProfileLoad.schedProfileLoadBox.hide
+                      option(value='select1') Sup&apos; 2/18/18
+                      |                                 
+                      option(value='select2') Sup&apos; 11/21/17
+                      |                                 
+                      option(value='select3') Sup&apos; 1/1/18
+                  |                         
+                  .schedNavBtns2
+                    div
+                      button#editProfileBtn.sNB2.hide Edit Profile
+                    |                             
+                    div
+                      button#saveProfileBtn.sNB2.hide Create Profile
+                |                     
+                |                     
+                #schedContId.schedCont.set.hide
+                  #profileForm.profileTemp.set
+                    .proLeft.set
+                      | Item Name: 
+                      input#itemNameInput.schedForm(type='text', placeholder='Box Logo')
+                      |  
+                      |                                 
+                      button#itemNametoProfile.profileBtn  Add 
+                      |                                 
+                      br
+                      |                                 Item Type: 
+                      |                                 
+                      br
+                      |                                 
+                      select#schedItemType.schedItemTypeC
+                        option(value='tshirt') T-Shirt
+                        |                                     
+                        option(value='hoodie') Hoodie
+                        |                                     
+                        option(value='accessories') Accessories
+                        |                                     
+                        option(value='skate') Skate
+                        |                                     
+                        option(value='pants') Pants
+                        |                                     
+                        option(value='shoes') Shoes
+                      |                                 
+                      br
+                      |                                 
+                      button#itemStyleToProfile.profileBtn Add
+                    |                             
+                    .proRight.set
+                      | Item Color: 
+                      input#itemColorInput.schedForm(type='text', placeholder='Green', value='Green')
+                      |                                 
+                      button#itemColorToProfile.profileBtn Add
+                      |                                 
+                      br
+                      |                                 
+                      p Size:
+                      |                 
+                      |                                 
+                      select#schedItemSize
+                        option(value='small') Small
+                        |                                     
+                        option(value='medium') Medium
+                        |                                     
+                        option(value='large') Large
+                        |                                     
+                        option(value='xlarge') Xlarge
+                      |                                 
+                      br
+                      |                                 
+                      button#itemSizeToProfile.profileBtn Add
+                  |                         
+                  #addAnotherItemID.addAnotherItem.set.hide
+                    button#addAnotherItemBtn.sNB.set ADD ANOTHER ITEM
+                  |                         
+                  #profilePreviewID.profilePreview.set
+                    #profilePreName.profilePre
+                      | PROFILE NAME:
+                    |          
+                    |                             
+                    #profilePreviewItems.profilePreviewItemC
+                      #proPreItemName.proPreItemNameC ITEM:
+                      |                                 
+                      #proPreItemType.proPreItemTypeC TYPE:
+                      |                                 
+                      #proPreItemColor.proPreItemColorC COLOR:
+                      |                                 
+                      #proPreItemSize.proPreItemSizeC SIZE:
+                    |                             
+                    button#submitProfile.profileBtn SUBMIT
+                |                     
+                #currentProfileID.currentProfileClass.hide.set
+                  .cProfileTop.set
+                    .cProfileTopLeft.set PROFILE NAME: &quot;EXAMPLE PROFILE&quot;
+                    |                             
+                    .cProfileTopRight.set NUMBER OF ITEMS: 3
+                  |                         
+                  .cProfileContent.set
+                    ol#currentProfileItemsList
+              |                 
+              #uPS4.uPM.uP4.hide upm4
+              |                 
+              #uPS5.uPM.uP5.hide upm5
+            // USER PANEL END
+          // MAIN CONTENT END
+        // SITE DIV END
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+        |     
+        script(src='https://www.gstatic.com/firebasejs/4.9.0/firebase.js')
+        |     
+        script(src='./javascripts/jq2.js')
